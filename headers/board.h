@@ -19,7 +19,7 @@ class Board : public Drawable
         void reset();
         bool _gameOver;
         SDL_Texture* _texture;
-        SDL_Texture* _winTextures[8];
+        SDL_Texture* _winTextures[9];
         WinLine _winLine;
         ShapeTextureFactory* _factory;
         BoardSpace* _spaces[3][3];

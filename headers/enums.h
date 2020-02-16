@@ -23,6 +23,7 @@ enum class WinLine
     Right = 5,
     BLToTR = 6,
     TLToBR = 7,
-    None = 8
+    Cat = 8,
+    None = 9
 };
 #endif

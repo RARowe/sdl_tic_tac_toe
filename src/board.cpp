@@ -21,6 +21,7 @@ Board::Board(GraphicsContext& context)
     _winTextures[(int)WinLine::Right] = context.getTexture("right_win.png");
     _winTextures[(int)WinLine::BLToTR] = context.getTexture("bl_to_tr_win.png");
     _winTextures[(int)WinLine::TLToBR] = context.getTexture("tl_to_br_win.png");
+    _winTextures[(int)WinLine::Cat] = context.getTexture("cat.png");
 
     _winLine = WinLine::None;
     _gameOver = false;
@@ -162,7 +163,11 @@ bool Board::gameOver()
             }
         }
     }
-    if (!emptySpace) { return true; }
+    if (!emptySpace)
+    { 
+        _winLine = WinLine::Cat;
+        return true;
+    }
 
     return false;
 }
